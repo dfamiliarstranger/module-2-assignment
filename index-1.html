@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title> responsive </title>
+<!--
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+
+
+		/*********** Simple Responsive Framework ******/
+
+		.row{
+			width: 100%;
+		}
+
+		/*********** Large devices only **********/
+		@media (min-width: 1200px) { .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+			position: absolute;
+			border: hidden;
+			width: 100%;
+		}
+		.col-lg-1 {
+		width: 8.33%;
+		}
+		.col-lg-2 {
+			width: 16.66%;
+		}
+		.col-lg-3 {
+			width: 25%;
+		}
+		.col-lg-4 {
+			width: 33%;
+		}
+		.col_lg-5 {
+			width: 41.66%;
+		}
+		.col-lg-6 {
+			width: 50%;
+		}
+		.col-lg-7 {
+			width: 58.33%
+		}
+		.col-lg-8 {
+			width: 66.66%;
+		}
+		.col-lg-9 {
+			width: 74.99%;
+		}
+		.col-lg-10 {
+			width: 83.33%;
+		}
+		.col-lg-11 {
+			width: 91.66%;
+		}
+		.col-lg-12 {
+			width: 100%;
+		}
+	}
+
+	/************** tablet ***************/
+	@media (min-width: 950px) and (max-width: 1199px) { .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+		float: left;
+		border:hidden;
+		width: 100%;
+	}
+	.col-md-1 {
+		width: 8.33%;
+	}
+	.col-md-2 {
+		width: 16.66%;
+	}
+	.col-md-3 {
+		width: 25%;
+	}
+	.col_md-4 {
+		width: 33.33%
+	}
+	.col-md-5 {
+		width: 41.66%;
+	}
+	.col-md-6 {
+		width: 50%;
+	}
+	.col-md-7 {
+		width:58.33%;
+	}
+	.col-md-8 {
+		width: 66.66%;
+	}
+	.col-md-9 {
+		width: 74.99%;
+	}
+	.col-md-10 {
+		width: 83.33%;
+	}
+	.col-md-11 {
+		width: 91.66%;
+	}
+	.col-md-12 {
+		width: 100%
+	}
+
+}
+		/********** other styles **********/
+h1 {
+	text-align: center;
+}
+
+.content-chicken{
+	box-sizing: border-box;
+			border:1px solid black;
+			background-color: grey;
+			width: 90%;
+			height: 150px;
+			margin-right: auto;
+			margin-left: auto;
+			font-family: Helvetica;
+			color:white;
+		}
+.content-beef{
+			border:1px solid black;
+			background-color: grey;
+			width: 90%;
+			height: 150px;
+			margin-right: auto;
+			margin-left: auto;
+			font-family: Helvetica;
+			color:white;
+		}
+.content-sushi{
+			border:1px solid black;
+			background-color: grey;
+			width: 90%;
+			align-content: center;
+			position: relative;
+			height: 150px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom:auto;
+			margin-top: auto;
+			font-family: Helvetica;
+			color:white;
+			overflow: hidden;
+		}
+
+
+	</style> -->
+</head>
+<body>
+
+	<h1 style="text-align: center"> Our Menu</h1>
+	<!-- <div class="row">
+		<div class="col-lg-4 col-md-6">
+			<div class="content-chicken">
+
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6">
+			<div class="content-beef">
+
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-12">
+			<div class="content-sushi">
+
+			</div>
+		</div>
+	</div> -->
+	<style media="screen">
+/* first i set the styling for the body for color difference */
+	body{
+		background: #f4f4f4;
+	}
+	/* next i used created a grid container. basically a grid stacks its child elemnets untop of one another which is the default for websites even if you dont specify grid  */
+	.row{
+		display: grid;
+		grid-gap: 1rem;
+		/* i can also use justify-content: space-between; or justify-content: space-evenly, instead of using grid-gap */
+	}
+	/* next instead of using all those names like you did i simplified mine, creating just one and optimizing it where neccesary. this enables me to giving all of them the same styling so i dont have to repeat myself */
+	.i-rows{
+		border: 2px solid #444;
+		border-radius: .5rem;
+		min-height: 50px;
+		text-align: center;
+	}
+	/* next i picked out each of those individual boxes and changed their background colors so you'd notice*/
+	.i-rows:nth-child(1){
+		background: #5c5c3d;
+	}
+	.i-rows:nth-child(2){
+		background: #5c5c3d;
+	}
+	.i-rows:nth-child(3){
+		background: #5c5c3d;
+	}
+	.top-div-1 {
+		padding: .5rem;
+		float: right;
+		background: pink;
+		border-left: 2px solid #444;
+		border-bottom: 2px solid #444;
+	}
+
+	.top-div-2 {
+		padding: .5rem;
+		float: right;
+		background: red;
+		border-left: 2px solid #444;
+		border-bottom: 2px solid #444;
+	}
+
+	.top-div-3 {
+		padding: .5rem;
+		float: right;
+		background: yellow;
+		border-left: 2px solid #444;
+		border-bottom: 2px solid #444;
+			}
+	p{
+		clear: both;
+		padding: .5rem;
+	}
+	/* from here i was writng the styling for tablet view */
+	@media (min-width: 768px) {
+		.row{
+			grid-template-columns: repeat(2, 1fr);
+			/* here i was stating that i want 2 blocks on 1 line  */
+		}
+		.i-rows:nth-child(3){
+			grid-column: 1/4;
+			/* this is quite confusing to explain. count your fingers, you have 5 on each palm, 4 spaces between them, grid-wise, i could say you have your palm is the grid-container or .row block and each finger as the .i-rows (individual-rows). you have 5 fingers and 10 vertices... will explain later  */
+		}
+	}
+	@media (min-width: 1024px) {
+		.row{
+			grid-template-columns: repeat(3, 1fr);
+			/* here i was stating that i want 3 blocks on 1 line  */
+
+		}
+		.i-rows:nth-child(3){
+			grid-column: 3;
+		}
+	}
+	</style>
+<div class="row">
+	<div class="i-rows">
+		<div class="content-chicken">
+			<div class="top-div-1">
+				chicken
+			</div>
+			<p>
+				Lorem ipsum dolor sit amet, aecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+	</div><div class="i-rows">
+		<div class="content-chicken">
+			<div class="top-div-2">
+				beef
+			</div>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali
+			</p>
+		</div>
+	</div><div class="i-rows">
+		<div class="content-chicken">
+			<div class="top-div-3">
+				sushi
+			</div>
+			<p>
+				Loriatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
